@@ -54,7 +54,6 @@ class Cipher(object):
                 j = (255L & (j + trans_table[k]))
                 [trans_table[j], trans_table[k]] = [
                     trans_table[k], trans_table[j]]
-                [trans_table[j], trans_table[k]]
                 n = (255L & (trans_table[k] + trans_table[j]))
                 ret_val[i] = (raw_bytes[i] ^ trans_table[n])
                 ret_val[i]
